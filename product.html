@@ -1,0 +1,489 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NT Sneaker - Product</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main/w3.css">
+	<link rel="stylesheet" href="stylesheet.css">
+	<style>
+		body {
+		  	margin: 0;
+		  	font-family: 'Work Sans', sans-serif;
+		}
+		
+		p, li, a {
+			line-height: 2;
+			letter-spacing: 1px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--	header-->
+	<div id="header"></div>
+	<header >
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<div class="ads container-fluid">
+			<a class="ads" href="shop.html">
+			<p><strong>Giảm giá sốc lên đến 50% trong tháng 5. </strong> Kết thúc trong <span id="ads">0</span></p>
+			</a>
+		</div>
+	</header>
+	<nav class="sticky-top">
+		
+		<!--Sidebar when use for mobile with small screen-->
+		<div class="w3-beside-sidebar-right" onClick="w3_close()" style="display: none;"></div>
+		<div class="w3-sidebar-right w3-bar-block w3-border-right" style="display:none; right: 0;" id="mySidebar">
+		  	<button onclick="w3_close()" class="w3-bar-item w3-large">Đóng &times;</button>
+		  	<a href="shop.html" class="w3-bar-item w3-button">Nam</a>
+		  	<a href="shop.html" class="w3-bar-item w3-button">Nữ</a>
+			<div class="w3-dropdown-click">
+				<button class="w3-button" onclick="myDropFunc()">Thương hiệu <i class="fa fa-caret-down"></i></button>
+				<div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+					<a href="shop.html" class="w3-bar-item w3-button">Nikey</a>
+					<a href="shop.html" class="w3-bar-item w3-button">Adidas</a>
+					<a href="shop.html" class="w3-bar-item w3-button">Bitis</a>
+					<a href="shop.html" class="w3-bar-item w3-button">FILA</a>
+				</div>
+			 </div>
+				<a href="shop.html" class="w3-bar-item w3-button">Bán chạy</a>
+				<a href="signIn.html" class="w3-bar-item w3-button">Tài khoản</a>
+				<a href="#" class="w3-bar-item w3-button">Liên hệ</a>
+		</div>
+	
+	
+	<!--Navigation bar use for desktop-->
+		<div id="nav" class="nav">
+			<div class="logo col-md-2 col-lg-2 col-xxl-2">
+				<a href="index.html"><h1>NT</h1></a>
+			</div>
+
+			<div id="myNavBar" class="main-navbar col-md-7 col-lg-7 col-xxl-6">
+				<a href="shop.html" class="myButton">Nam</a>
+				<a href="shop.html" class="myButton">Nữ</a>
+				<div class="w3-dropdown-hover">
+				  	<a class="myButton" >Thương hiệu <i class="fa fa-caret-down"></i></a>
+				  	<div class="w3-dropdown-content w3-bar-block w3-card-4">
+						<a href="shop.html" class="w3-bar-item w3-button">Nike</a>
+						<a href="shop.html" class="w3-bar-item w3-button">Adidas</a>
+						<a href="shop.html" class="w3-bar-item w3-button">Bitis</a>
+				  	</div>
+				</div>
+				<a href="shop.html" class="myButton">Bán chạy</a>
+				<a href="#" class="myButton">Liên hệ</a>
+			</div>
+
+
+
+			<div class="sub-navbar col-md-3 col-lg-3 col-xxl-4" >
+				<img src="search.png" class="search-icon" style="width: 21px; height: 21px" alt="">
+				<input type="text" class="search-bar" name="q" required="">
+
+				<button class="w3-button w3-right w3-xlarge scroll-icon" onclick="w3_open()">&#9776;</button>
+				<div class="cart-icon"><a href="cart.html"><img src="icons8-cart-30.png"  style="width: 30px; " alt=""></a></div>
+
+				<div class="user-icon"><a href="signIn.html"><img src="icons8-user-60.png"  style="width: 30px; border: 2px solid black; border-radius: 50px;" alt=""></a></div>
+			</div>
+		</div>
+	</nav>
+<!--	myBreadcum-->
+	
+	<div class="myBreadcrumb container-fluid bg-black p-3">
+		<div class="row ">
+			<p> <a href="index.html">Trang chủ</a> / <a href="shop.html">Danh sách Sản phẩm</a> / <a href="product.html">Sản phẩm...</a></p>
+		</div>
+		<div class="row ">
+			<h1>Một sản phẩm ...</h1>
+		</div>
+	</div>
+<!--	Content		-->
+	<div class="product">
+		<div class="container col-xxl-12 ">
+    	<div class="row flex-lg-row align-items-top g-5 py-5">
+		<!--			Carousel -->
+			<div class="col-12 col-md-12 col-lg-6">
+<!--
+-->				<div class="image-slider">
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">    
+                            <div class="carousel-inner">
+                                <div class="carousel-item">
+                                    <img src="Giay.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item active">
+                                    <img src="Giay1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Giay2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Giay3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Giay4.jpg" class="d-block w-100" alt="...">
+                                </div>
+								<div class="carousel-item">
+                                    <img src="Giay5.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="" style="width: 20%;">
+                                    <img src="Giay.jpg" class="d-block w-100" alt="...">
+                                </button>
+                                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" class="active" aria-current="true" style="width: 20%;">
+                                    <img src="Giay1.jpg" class="d-block w-100" alt="...">
+                                </button>
+                                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" class="" style="width: 25%;">
+                                    <img src="Giay2.jpg" class="d-block w-100" alt="...">
+                                </button>
+                                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" class="" style="width: 25%;">
+                                    <img src="Giay3.jpg" class="d-block w-100" alt="...">
+                                </button>
+                                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" class="" style="width: 25%;">
+                                    <img src="Giay4.jpg" class="d-block w-100" alt="...">
+                                </button>
+								<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" class="" style="width: 25%;">
+                                    <img src="Giay5.jpg" class="d-block w-100" alt="...">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+				
+			</div>
+    	<!------------Mo ta------------------>
+    		<div class="col-lg-6">
+        	<h5 class="display-7 fw-bold text-body-emphasis lh-1 mb-3">GENERATION ZERØGRAND II</h5>
+        	<p class="lead">
+				<p>Mã SP: W27399C50224</p>
+				<p>4,890,000đ</p>
+				<p>MÀU SẮC</p>
+				<img src="Giay.jpg" style="width: 15%">
+				<img src="white_w27445_giay_sneaker_cole_haan__1__4092c0e413c94e7f964e4098ae99b4ff_large.pnj.webp" style="width: 15%">
+				<p>UP SIZE</p>
+				<div class="btn-group" role="group" aria-label="Small button group">
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-dark" for="btnradio1" style="font-size: 13px; font-weight: bold; border-radius: 5px">5</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio2" style="font-size: 13px; font-weight: bold; border-radius: 5px; width: 40px">5.5</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio3" style="font-size: 13px; font-weight: bold; border-radius: 5px">6</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio4" style="font-size: 13px; font-weight: bold; border-radius: 5px; width: 40px">6.5</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio5" style="font-size: 13px; font-weight: bold; border-radius: 5px">7</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio6" style="font-size: 13px; font-weight: bold; border-radius: 5px; width: 40px">7.5</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio7" style="font-size: 13px; font-weight: bold; border-radius: 5px">8</label>
+				</div>
+				<div style="clear: both"></div>
+				<br>
+				<p>FORM</p>
+				<div class="btn-group" role="group1" aria-label="Basic radio toggle button group">
+					<!--<div class="btn-group me-2" role="group" aria-label="Second group">-->
+					  <input type="radio" class="btn-check" name="btnradio8" id="btnradio8" autocomplete="off" checked>
+					  <label class="btn btn-outline-dark" for="btnradio8" style="width: 57px; height: 40px; font-size: 13px; font-weight: bold;">WIDE</label>
+					<!--</div>-->
+				</div>
+				<br><br>
+				<div style="clear: both"></div>
+				<div>
+					<a href="#huongdan" style="text-decoration: none; color: black">Hướng dẫn chọn size</a>
+				</div>
+				<br>
+				<div>
+					<p>Số lượng &ensp;<input type="number" id="quantity" name="quantity" value="0" min="0" max="100"></p>
+				</div>
+				<!--<div>
+					<p class="Gio">THÊM VÀO GIỎ HÀNG</p>
+					<p class="Gio1">&#9825;</p>
+				</div>-->
+				<div class="btn-group" role="group2" aria-label="Basic radio toggle button group">
+					<!--<p class="Gio" style="margin-left: 10px">THÊM VÀO GIỎ HÀNG</p>-->
+					<p><a href="GioHang.html" style="border-style: none"><input type="submit" value="THÊM VÀO GIỎ HÀNG" style="width: 450px; height: 50px; font-weight: bold; align-items: center; padding: 10px; margin-right: 20px; background: white;"></a></p>
+					<input type="radio" class="btn-check" name="btnradio9" id="btnradio9" autocomplete="off">
+					<label class="btn btn-outline-dark" for="btnradio9" style="width: 100px; height: 50px; font-weight: bold; align-items: center; padding: 10px">&#9825;</label>  
+				</div>
+				<br>
+				<div>
+					<p class="Gio2">2 CỬA HÀNG CÒN SẢN PHẨM NÀY</p>
+				</div>
+				<div class="describe">
+					<h4>Mô tả chi tiết</h4>
+					<p>Bộ sưu tập <b>GENERATION ZERØGRAND II SQL</b>, dòng sản phẩm sneaker đầu tiên hướng tới <b>"Thời Trang Bền Vững"</b> của <b>Cole Haan</b>, được thiết kế linh hoạt và tạo ra từ các vật liệu thiên nhiên hoặc tái chế. 
+					<ul>
+						<li>Thiết kế mũ giày tỉ mỉ, được nghiên cứu kỹ lưỡng với 20% là vật liệu tái chế, với vải nỉ <b>rPET</b> có 85% thành phần là vỏ chai nhựa tái chế</li>
+						<li>Lớp giày 100% từ <b>rPET</b> – nhựa tái chế.</li>
+						<li>Đế <b>FlowerFoam ™</b> được làm từ cao su bồ công anh tự nhiên (25% thành phần vật liệu), mang lại trải nghiệm nhẹ nhàng, êm ái giúp bạn di chuyển thoải mái mỗi ngày</li>
+						<li>Đế giữa được thiết kế sang trọng, với khả năng đệm vượt trội mang lại cảm giác em ái và thoải mái suốt ngày dài</li>
+						<li>Cấu trúc siêu nhẹ, kết hợp hài hòa mũ giày và đế <b>FlowerFoam ™</b> hỗ trợ đôi chân chuyển động tự nhiên.</li>
+					</ul>
+					</p>
+				</div>
+			</p>
+        	<!--<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          		<button type="button" class="btn btn-outline-secondary btn-lg px-4 me-md-2" style="border-radius: 0px; ">About VAT Team</button>
+        	</div>-->
+      	</div>
+    	</div>
+    	
+    	<!--Hướng dẫn chọn size giày-->
+	<h3 align="center"><a name="huongdan" style="border-style: none">Hướng dẫn chọn size giày</a></h3>
+	<div class="row flex-lg-row align-items-top g-5 py-5">
+	<div class="sizeleft">
+		<p><b>Hướng dẫn chọn size giày nữ (theo chiều dài )</b></p>
+		<p>Để xác định chỉnh xác kích cỡ giày, Quý khách vui lòng xem các bước hướng dẫn sau đây :</p>
+		<div style="float: left; width: 30%; "><img src="7(1).jpg"></div>
+		<div style="float: right; width: 70%">
+			<ol>
+				<li>Đặt chân của Quý khách lên trên một tờ giấy.</li>
+				<li>Đo theo chiều dài của bàn chân, tính theo centimeters, theo chiều từ gót chân đến ngón chân dài nhất trên bàn chân.</li>
+				<li>Tìm theo chiều dài gần nhất tương ứng theo bảng quy đổi bên trái, sau đó tìm theo kích thước size giày bên trái theo bảng hướng dẫn bên phải.</li>
+			</ol>
+		</div>
+		<div style="clear: both"></div>
+		<div><table class="table table-astriped table-hover table-bordered mx-auto" border="1px" style="width: 100%; border-collapse: collapse">
+		<thead class="table">
+			<tr class="bg-white">
+				<th scope="col">US</th>
+				<th scope="col">EU</th>
+				<th scope="col">UK</th>
+				<th scope="col">CM</th>
+			</tr>
+		</thead>
+			<tr>
+				<th style="background: #D2D2D2" scope="col">4</th>
+				<th style="background: #D2D2D2" scope="col">34</th>
+				<th style="background: #D2D2D2" scope="col">1.5</th>
+				<th style="background: #D2D2D2" scope="col">21</th>
+			</tr>
+			<tr>
+				<th scope="col">4.5</th>
+				<th scope="col">34.5</th>
+				<th scope="col">2</th>
+				<th scope="col">21.5</th>
+			</tr>
+			<tr>
+				<th style="background: #D2D2D2" scope="col">5</th>
+				<th style="background: #D2D2D2" scope="col">35</th>
+				<th style="background: #D2D2D2" scope="col">2.5</th>
+				<th style="background: #D2D2D2" scope="col">22</th>
+			</tr>
+	</table></div>
+	</div>
+	
+	<!---->
+	<div class="sizeleft">
+		<p><b>Hướng dẫn chọn size giày nữ theo chiều ngang ( chiều rộng )</b></p>
+		<p>Để xác định chỉnh xác kích cỡ giày, Quý khách vui lòng xem các bước hướng dẫn sau đây :</p>
+		<div style="float: left; width: 30%; "><img src="7(2).jpg"></div>
+		<div style="float: right; width: 70%">
+			<ol>
+				<li>Đặt chân của Quý khách lên trên một tờ giấy.</li>
+				<li>Đo theo chiều ngang của bàn chân, tính theo millimeters ( mm ), tính theo từ vị trí biên đến bề ngang rộng nhất trên bàn chân của Quý khách.</li>
+				<li>Tìm theo kích thước size giày từ cột bên phải, sau đó tìm theo chiều rộng tương ứng gần nhất theo bảng quy đổi bên trái.</li>
+			</ol>
+		</div>
+		<div style="clear: both"></div>
+		<div><table class="table table-astriped table-hover table-bordered mx-auto" border="1px" style="width: 100%; border-collapse: collapse">
+		<thead class="table">
+			<tr class="bg-white">
+				<th scope="col">Size (US)</th>
+				<th scope="col">Narrow - N or AA</th>
+				<th scope="col">Regular - M or B</th>
+				<th scope="col">Wide - W or C</th>
+			</tr>
+		</thead>
+			<tr>
+				<th style="background: #D2D2D2" scope="col">5</th>
+				<th style="background: #D2D2D2" scope="col">74.71</th>
+				<th style="background: #D2D2D2" scope="col">77.88</th>
+				<th style="background: #D2D2D2" scope="col">79.46</th>
+			</tr>
+			<tr>
+				<th scope="col">5.5</th>
+				<th scope="col">75.77</th>
+				<th scope="col">78.94</th>
+				<th scope="col">80.52</th>
+			</tr>
+			<tr>
+				<th style="background: #D2D2D2" scope="col">6</th>
+				<th style="background: #D2D2D2" scope="col">76.83</th>
+				<th style="background: #D2D2D2" scope="col">80</th>
+				<th style="background: #D2D2D2" scope="col">81.58</th>
+			</tr>
+	</table>
+ 	</div>
+  	</div>	
+    </div>  
+    </div>
+	</div>
+	
+	
+<!--	footer-->
+	<footer>
+		<!--____________________________Informations______________________________________________________-->
+		<div class="information container auto;" style="min-width: 85%;">
+			<!--Connect và contact-->
+		<section class="section1">
+			<div class="row">
+				<!--Connect-->
+				<div class="connect col-12 col-md-6 col-sm-12">
+						<h2 class="text-bold">Kết nối</h2>
+						<p>Nhập email để đăng ký nhận thông tin mới nhất về sản phẩm, sự kiện và ưu đãi độc quyền của NT Sneaker
+						</p>
+
+						<div>
+							<form accept-charset="UTF-8" action="" class="contact-form" method="post">
+								<input style="width: 100%; border: none; background-color: #C5D3D9; border-bottom: 1px solid black;" required="" type="email" name="" aria-label="Email Address" placeholder="Nhập email của bạn">
+								<button style="border: none; background-color: #C5D3D9; font-weight: 700; margin-left: -3px; " type="submit" value="Đăng ký">Đăng ký
+								</button>
+							</form>
+						</div>
+						<div class="social-contact">
+							<a href="" title="Facebook" target="_blank">
+								<img src="icons8-facebook-50.png" alt="facebook-icon">	
+							</a>
+							<a href="" title="Instagram" target="_blank">
+								<img src="icons8-instagram-50.png" alt="instagram-icon">	
+							</a>
+							<a href="" title="Tiktok" target="_blank">
+								<img src="icons8-tiktok-50.png" alt="tiktok-icon">	
+							</a>
+						</div>
+						<div class="center">
+							<a href="" target="_blank" class="center">
+								<img src="boCongThuong.png" alt="bo cong thuong" style="width: 200px; margin: 0 auto;">
+							</a>
+						</div>					
+				</div>
+
+				<!--_______________________Contact________________________________-->
+				<div class="contact col-12 col-md-6 col-sm-12">
+						<h2 class="text-bold">Thông tin liên hệ</h2>
+						<p><br>
+						Công ty Cổ phần NT
+						<br>Địa chỉ: 102 Nguyễn Quý Anh, Phường Tân Sơn Nhì, Quận Tân Phú, TPHCM
+						<br>Số ĐKKD 0304198785 do Sở Kế hoạch đầu tư TP HCM cấp ngày 26/02/2023</p>
+						<div class="info-contact">	
+							<div>
+								<pre><img src="icons8-phone-50.png" alt="icon-phones" style="width: 30px;"> (028) 39 255 200</pre>
+								
+							</div>
+						</div>
+					<br>
+						<div class="info-contact">
+							<div>
+								<pre href="mailto:colehaancare@tbsretail.vn"><img src="icons8-mail-50.png" alt="icon-email" style="width: 30px;"> sneaker@ntretail.vn</pre>
+							</div>
+						</div>
+					<br>
+					<div class="info-contact">
+						<div>
+							<span><img src="icons8-calendar-50.png" alt="icon-calendar" style="width: 30px;"> Thứ 2 - thứ 6 hàng tuần, 8:30AM – 5:30PM</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+		<!----------------------Chính sách--------------------------->
+		<section class="section2">
+			<div class="row center">
+				<div class="col-12 col-md-4 col-sm-12">
+					<h5 class="text-bold" data-toggle-title="">Chính sách khách hàng</h5>
+					<ul class="myl">
+						<li><a href="" class="mya">Hướng dẫn đặt hàng</a></li>
+						<li><a href="" class="mya">Chính sách bảo hành</a></li>
+						<li><a href="" class="mya">Chính sách đổi hàng</a></li>
+						<li><a href="" class="mya">Phương thức thanh toán</a></li>
+						<li><a href="" class="mya">Kiểm tra đơn hàng</a></li>
+						<li><a href="" class="mya">Chương trình khách hàng VIP</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4 col-sm-12">
+					<h5 class="text-bold l mya">Giới thiệu</h5>
+					<ul class="myl">
+						<li><a href="" class="mya">Về NT</a></li>
+						<li><a href="" class="mya">Tìm cửa hàng</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4 col-sm-12">
+					<h5 class="text-bold myl mya">Nhà phân phối</h5>
+					<ul class="myl">
+						<li><a href="" class="mya">Về TBS Retail</a></li>
+						<li><a href="" class="mya">Tuyển dụng</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+			
+		<!--Dẫn lên đầu trang-->
+		<section class="section3">
+			<br>
+			<ul class="myl mylmenu center">
+				<li ><a href="" class="mya" >Chính sách bảo mật</a></li>|
+				<li><a href="" class="mya" >Điều khoản sử dụng</a></li>|
+				<li><a href="" class="mya">Tìm cửa hàng</a></li>
+			</ul>
+			<br>
+			<div class="copyright">
+				© <span class="yearnow">2023</span> NT Sneaker 
+			</div>
+			<br>
+			<div class="back-to-top">
+				<a href="#header" class="mya">
+					<img src="icons8-top-50.png" title="Make your way to the top" alt="Make your way to the top" style="width: 100px;">
+				</a>
+				<br>
+				<br>
+				<a href="#header" class="mya">Trở về đầu trang
+				</a>
+			</div>
+		</section>
+	</div>
+		
+		
+		
+		
+		
+		<!--Chân trang___________________________________________________-->
+		<div class="end container-fluid">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 text-left flex-center">
+					<ul class="row">
+						<li class="col-3">
+							<a href="#" class="mya" title="Về TBS Retail">Về NTRetail
+							</a>
+						</li>
+
+						<li class="col-3">
+							<a href="#" class="mya" title="Tuyển dụng">Tuyển dụng
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 text-right flex-center" style="justify-content: flex-end;">
+				<p style="color:white; margin-left: 30px; ">Copyright © 2023 - 2023 NTRetail - TRẦN THỊ NGỌC TRÂN - 2001210032| <br>All right reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script src="index.js"> </script>
+</body>
+</html>
